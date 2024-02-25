@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="clock.css">
+<body style="background-color: blueviolet;">
+  <h1 style="text-align: center;">DIGITAL CLOCK</h1>
+  <div id="clock" style="text-align: center;">
+    <div id="hr"><span id="hours">00</span></div>
+    <span>:</span>
+    <span id="min">00</span>
+    <span>:</span>
+    <span id="secs">00</span>
+    <span id="am"></span>
+  </div>
+    <script>
+        function Time(){
+
+        
+      let clock= new Date()
+      let hr =clock.getHours()
+      let min=clock.getMinutes()
+      let sec=clock.getSeconds()
+      let hrs=clock.getHours()
+       let hours=document.querySelector("#hours")
+       if (hr>12)
+       hr=hr-12
+      if (hr<10)
+      hr='0'+hr
+       hours.innerHTML=hr
+       let minutes=document.querySelector("#min")
+       if(min<10)
+     min='0'+min
+       minutes.innerHTML=min
+       let seconds=document.querySelector("#secs")
+       seconds.innerHTML=sec
+    if (sec<10)
+       sec='0'+Seconds
+    
+    let day=document.querySelector("#am")
+        if (hrs>12)
+        am.innerHTML="pm"
+
+    if (hrs<12)
+    am.innerHTML= "am"
+      
+  }
+    setInterval(Time,1000) 
+    </script>
+</body>
+</html>
